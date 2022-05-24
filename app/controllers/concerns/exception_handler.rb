@@ -4,7 +4,7 @@ module ExceptionHandler
     end
     included do
       rescue_from ActionController::ParameterMissing, with: :parameter_missing
-      rescue_from StandardError, with: :handle_unauthenticated
+      rescue_from AuthenticateError, with: :handle_unauthenticated
       rescue_from ActiveRecord::RecordNotFound do |e|
         json_response({ error: e.message }, :not_found)
       end
@@ -21,6 +21,6 @@ module ExceptionHandler
     end
 
     def handle_unauthenticated
-      render json: { error: 'Incorrect application_id ' }, status: :unauthorized
+      render json: { error: 'Incorrect application_id' }, status: :unauthorized
     end
    end

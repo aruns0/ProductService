@@ -7,7 +7,7 @@ RSpec.describe "Products", type: :request do
   # Test suite for GET /products
  describe 'GET /products' do
   # make HTTP get request 
-  before { get '/api/v1/products',headers: { 'Authorization' => AuthenticationService.call(9999) } }
+  before { get '/api/v1/products',headers: { 'Authorization' => AuthenticationService.call(ENV["api_key"]) } }
   it 'returns products' do
     expect(json).not_to be_empty
     expect(json.size).to eq(10)
@@ -18,7 +18,7 @@ RSpec.describe "Products", type: :request do
 end
 
 describe 'GET /products/:id' do
-  before { get "/api/v1/products/#{product_id}" ,headers: { 'Authorization' => AuthenticationService.call(9999) }}
+  before { get "/api/v1/products/#{product_id}" ,headers: { 'Authorization' => AuthenticationService.call(ENV["api_key"]) }}
   context 'when product exists' do
     it 'returns status code 200' do
       expect(response).to have_http_status(200)

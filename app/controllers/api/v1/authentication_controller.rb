@@ -11,6 +11,6 @@ class Api::V1:: AuthenticationController < ApplicationController
   
         private
         def application
-          @application = "123e4567-e89b-12d3-a456-426655440000"
+          @application = ENV['api_key']
         end    
   end

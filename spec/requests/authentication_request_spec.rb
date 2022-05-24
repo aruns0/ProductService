@@ -1,6 +1,6 @@
 RSpec.describe 'Authentications', type: :request do
     describe 'POST /token' do
-        let(:id) { "123e4567-e89b-12d3-a456-426655440000" }
+        let(:id) { ENV["api_key"] }
         let(:error_id) { "123e4567" }
       it 'authenticates the application' do
         post '/api/v1/token', params: { application_id: id }
