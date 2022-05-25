@@ -7,7 +7,7 @@ RSpec.describe "Products", type: :request do
   # Test suite for GET /products
  describe 'GET /products' do
   # make HTTP get request 
-  before { get '/api/v1/products',headers: { 'Authorization' => AuthenticationService.call(ENV["api_key"]) } }
+  before { get '/api/v1/products?page=1',headers: { 'Authorization' => AuthenticationService.call(ENV["api_key"]) } }
   it 'returns products' do
     expect(json).not_to be_empty
     expect(json.size).to eq(10)

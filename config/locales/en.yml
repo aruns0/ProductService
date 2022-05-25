@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  error_notexist: "No such application exists"
+  error_token: "generate the token first"

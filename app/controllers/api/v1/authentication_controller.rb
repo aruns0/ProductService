@@ -5,7 +5,7 @@ class Api::V1:: AuthenticationController < ApplicationController
             raise AuthenticateError unless application == params.require(:application_id) 
             render json: AuthenticationRepresenter.new(params.require(:application_id)).as_json, status: :created
           else
-            render json: { error: 'No such application exists' }, status: :unauthorized
+            render json: { error: "#{I18n.t "error_notexists"}"}, status: :unauthorized
           end
         end
   

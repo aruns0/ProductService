@@ -4,7 +4,7 @@ class Api::V1:: ProductsController < ApplicationController
   # GET /products
     def index
         limit = ENV['data_limit'].to_i
-        page = params[:page]        
+        page = params[:page]      
         @products = Product.filter(products_params).paginate(:page => "#{page}", :per_page => "#{limit}")      
         results  =  ProductsRepresenter.new(@products).products_as_json       
         product_count(results,limit) if page == "1"
@@ -14,7 +14,9 @@ class Api::V1:: ProductsController < ApplicationController
     def show
       render json: ProductRepresenter.new(@product).as_json
     end
+
     private
+    
     def set_product
       @product = Product.find("#{params[:id]}")
     end

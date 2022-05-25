@@ -14,12 +14,7 @@ class ProductsRepresenter
          url:  product.url         
       }
     end   
-  end
-  def count_as_json
-    {  
-      total:  100           
-    }
-  end
+  end  
   private
   attr_reader :products
 end

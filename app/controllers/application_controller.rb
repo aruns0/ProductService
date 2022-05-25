@@ -21,6 +21,6 @@ class ApplicationController < ActionController::API
             nil 
         end
         def invalid_authentication
-            render json: { error: 'generate the token first' }, status: :unauthorized
+            render json: { error: "#{I18n.t "error_token"}" }, status: :unauthorized
         end
 end
