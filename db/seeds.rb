@@ -35,7 +35,6 @@ Product.create!([{
     url:"image1.png",
     description:"The adidas Superstar Shoe made its debut on the hardwood, but it wasn't long before it leapt to the hip hop scene and then onto feet worldwide."
   },
-
   {
     name: "Street Ball Shoes",
     price: 200,
@@ -80,8 +79,7 @@ Product.create!([{
     colour:"black",
     url:"image1.png",
     description:"The adidas Superstar Shoe made its debut on the hardwood, but it wasn't long before it leapt to the hip hop scene and then onto feet worldwide."
-  }
-  ,
+  },
   {
     name: "Men  Shoes",
     price: 200,
@@ -90,6 +88,6 @@ Product.create!([{
     colour:"black",
     url:"image1.png",
     description:"The adidas Superstar Shoe made its debut on the hardwood, but it wasn't long before it leapt to the hip hop scene and then onto feet worldwide."
-  }
-])
+  }])
+
 p "Created #{Product.count} products"
