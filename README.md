@@ -49,7 +49,9 @@ Authentication token, Request parameter white listing and SQL injection preventi
   $ bundle install
 
 - Database setup
+
   $ rails db:migrate RAILS_ENV=test
+
   $ rails db:migrate
 
 - Run the test cases
@@ -64,7 +66,7 @@ Authentication token, Request parameter white listing and SQL injection preventi
 
   $ rails s
 
-### -------------API End Points
+### -------------API End Points---------------
 
 - Generate token (expires every 5 minutes)
 
@@ -90,16 +92,16 @@ Authentication token, Request parameter white listing and SQL injection preventi
 
   $ GET http://localhost:3000/api/v1/products?sort=price&dir=desc
 
-### -------------Postman Collection
+### -------------Postman Collection------------------
 
 - Available at the project root folder.
 
-### TODO
+### --------------------TODO--------------------------
 
 - Improve the code quality by learning best practices in Ruby on Rails.
 - Improve Restful nature by covering all 200,300 and 500 status codes.
 - Include more test cases to extend the code coverage.
-- Regression Testing.
+- Regression testing and bug fixing.
 - Implement OWASP security guidelines for better security.
 - Caching mechanism to reduce the DB interaction and increase the performance.
 - Replace SQLLIte with PostgreSQL
