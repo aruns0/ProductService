@@ -49,16 +49,20 @@ Authentication token, Request parameter white listing and SQL injection preventi
   $ bundle install
 
 - Database setup
-
+  $ rails db:migrate RAILS_ENV=test
   $ rails db:migrate
+
+- Run the test cases
+
+  $ rspec
 
 - Feed database with sample values
 
   $ rails db:seed
 
-- Run the test cases
+- Run the Server
 
-  $ rspec
+  $ rails s
 
 ### -------------API End Points
 
@@ -68,7 +72,7 @@ Authentication token, Request parameter white listing and SQL injection preventi
 
 - List of products
 
-$ GET http://localhost:3000/api/v1/products
+  $ GET http://localhost:3000/api/v1/products
 
 - Filter products (based on size,brand)
 
