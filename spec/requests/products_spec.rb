@@ -6,11 +6,11 @@ RSpec.describe "Products", type: :request do
   let(:product_id) { products.first.id }
   # Test suite for GET /products
  describe 'GET /products' do
-  # make HTTP get request 
+  # make HTTP get request   
   before { get '/api/v1/products?page=1',headers: { 'Authorization' => AuthenticationService.call(ENV["api_key"]) } }
   it 'returns products' do
     expect(json).not_to be_empty
-    expect(json.size).to eq(10)
+    expect(json.size).to eq(ENV["data_limit"].to_i+2)
   end
   it 'returns status code 200' do
     expect(response).to have_http_status(200)

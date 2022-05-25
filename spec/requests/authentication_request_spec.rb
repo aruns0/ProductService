@@ -5,8 +5,7 @@ RSpec.describe 'Authentications', type: :request do
       it 'authenticates the application' do
         post '/api/v1/token', params: { application_id: id }
         expect(response).to have_http_status(:created)
-        expect(json).to eq({
-                             'id' => id,
+        expect(json).to eq({                            
                              'token' => AuthenticationService.call(id)
                            })
       end
