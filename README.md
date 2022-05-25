@@ -5,20 +5,23 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Insall the dependencies
 
-* System dependencies
+  $ bundle install
 
-* Configuration
+- Database setup
 
-* Database creation
+  $ rails db:migrate
 
-* Database initialization
+- Feed database with sample values
 
-* How to run the test suite
+  $ rails db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+- Run the test cases
 
-* Deployment instructions
+  $ rspec
 
-* ...
+- Usage
+  POST api/v1/token Generate auth token
+  GET api/v1/products Get product list
+  GET api/v1/products/:id Get a product
