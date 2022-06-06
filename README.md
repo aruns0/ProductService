@@ -1,6 +1,6 @@
 # README
 
-This is my first project in Ruby On Rails.Thanks to the framework since I was able to set it up in couple of days with out afffecting my scheculed works.As part of learning I have referenced youtube videoes, Ruby on Rails documentation , Stack overflow and several technical blogs written by experienced Ruby developers.I tried my level best to include the best practices in a short span of time. I think there are lot of rooms for improvement.
+This is my first project in Ruby On Rails.As part of learning, I have referenced youtube videoes, Ruby on Rails documentation , Stack overflow and several technical blogs written by experienced Ruby developers.I tried my level best to include the best practices in a short span of time. Still a lot more to improve.
 
 ### -------------- Best Practices followed --------------
 
@@ -43,6 +43,10 @@ Authentication token, Request parameter white listing and SQL injection preventi
   Note: It could vary depends on the infrastructure or with more optimized code.
 
 ### -------------Instruction for setting up the application ----------------
+
+- Clone the project
+
+$ git clone https://github.com/aruns0/ProductService.git
 
 - Install dependencies
 

@@ -5,7 +5,7 @@ class ProductsRepresenter
   def products_as_json    
      products.map do |product|
       {  
-         product_id:product.id,
+         id:product.id,
          name:  product.name,
          brand: product.brand,
          size:  product.size,
